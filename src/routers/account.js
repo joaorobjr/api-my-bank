@@ -20,7 +20,7 @@ router.get('/:id', async (req, res, next) => {
   }
 });
 
-router.get('/a/:agency/:accountNumber', async (req, res, next) => {
+router.get('/:agency/:accountNumber', async (req, res, next) => {
   try {
     await accountController.getAccountByAgencyAndNumber(req, res);
   } catch (error) {
@@ -100,7 +100,7 @@ router.patch('/upgradeAgency', async (req, res, next) => {
   }
 });
 
-router.delete('/:agency/:accountNumber', async (req, res, next) => {
+router.delete('/remove/:agency/:accountNumber', async (req, res, next) => {
   try {
     await accountController.deleteAccount(req, res);
   } catch (error) {
